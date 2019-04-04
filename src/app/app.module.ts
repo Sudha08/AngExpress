@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const Routes = [
@@ -16,13 +17,17 @@ const Routes = [
   },
   {
     path: 'posts', component: PostsComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

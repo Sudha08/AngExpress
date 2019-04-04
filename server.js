@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Getting our POST routes
-const posts = require('./server/routes/posts');
+const routes = require('./server/routes/routes');
 
 // using Middleware
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/posts', posts);
+app.use('/routes', routes);
 
 // catch all other routes request and return it to the index
 app.get('/*', (req, res) => {

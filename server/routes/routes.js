@@ -4,8 +4,12 @@ const axios = require('axios');
 
 const postAPI = 'https://jsonplaceholder.typicode.com';
 
-// Get POST
 router.get('/', (req, res) => {
+    res.send('It works');
+});
+
+// Get POST
+router.get('/posts', (req, res) => {
 
     axios.get(`${postAPI}/posts`).then(posts => {
         res.status(200).json(posts.data);        
@@ -13,7 +17,6 @@ router.get('/', (req, res) => {
     .catch(err => {
         res.status(500).send(err);
     });
-
 });
 
 module.exports = router;
