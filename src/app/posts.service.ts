@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from "rxjs/operators";
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,6 @@ export class PostsService {
 
   getAllPosts() {
     return this.http.get('/routes/posts/').pipe(
-    map((posts) => { return posts; }));
-  };
+    map((posts) =>  posts ));
+  }
 }
